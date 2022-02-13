@@ -6,6 +6,7 @@ use Ds\Set;
 use Invoke\Container;
 use Invoke\Invoke;
 use Invoke\Meta\Parameter;
+use Invoke\Toolkit\Docs\Sections\MethodsSection;
 use Invoke\Toolkit\Validators\ArrayOf;
 use Invoke\Utils\Utils;
 use function Invoke\Utils\array_unique_by_key;
@@ -108,7 +109,9 @@ class ApiDocument extends Document
             }
         }
 
-        $sections = $invoke->getConfig("apiDocument.sections");
+        $sections = $invoke->getConfig("apiDocument.sections", [
+            MethodsSection::class,
+        ]);
         $sections = array_map(fn($section) => Container::make($section)->pass([
             "types" => $types->toArray(),
             "methods" => $methods,
@@ -129,10 +132,10 @@ class ApiDocument extends Document
 
         $invokeInstruction = [
             "name" => $invoke->getConfig("apiDocument.invokeInstruction.name", "fetch"),
-            "protocol" => $invoke->getConfig("apiDocument.invokeInstruction.protocol", $invoke->getConfig("serve.protocol", "http")),
-            "host" => $invoke->getConfig("apiDocument.invokeInstruction.host", $invoke->getConfig("serve.host", "localhost")),
-            "port" => $invoke->getConfig("apiDocument.invokeInstruction.port", $invoke->getConfig("serve.port", 8081)),
-            "path" => $invoke->getConfig("apiDocument.invokeInstruction.path", $invoke->getConfig("serve.pathPrefix", "")),
+            "protocol" => $invoke->getConfig("apiDocument.invokeInstruction.protocol", $invoke->getConfig("server.protocol", "http")),
+            "host" => $invoke->getConfig("apiDocument.invokeInstruction.host", $invoke->getConfig("server.host", "localhost")),
+            "port" => $invoke->getConfig("apiDocument.invokeInstruction.port", $invoke->getConfig("server.port", 8081)),
+            "path" => $invoke->getConfig("apiDocument.invokeInstruction.path", $invoke->getConfig("server.pathPrefix", "")),
             "type" => $invoke->getConfig("apiDocument.invokeInstruction.type", "json")
         ];
 

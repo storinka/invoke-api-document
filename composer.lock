@@ -636,12 +636,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/storinka/invoke.git",
-                "reference": "2d88b16a4de3fd1019495ba308547e5919848abc"
+                "reference": "970594e774f524cde6bd826644b74745d072d236"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/storinka/invoke/zipball/2d88b16a4de3fd1019495ba308547e5919848abc",
-                "reference": "2d88b16a4de3fd1019495ba308547e5919848abc",
+                "url": "https://api.github.com/repos/storinka/invoke/zipball/970594e774f524cde6bd826644b74745d072d236",
+                "reference": "970594e774f524cde6bd826644b74745d072d236",
                 "shasum": ""
             },
             "require": {
@@ -683,7 +683,7 @@
                 "issues": "https://github.com/storinka/invoke/issues",
                 "source": "https://github.com/storinka/invoke/tree/v2"
             },
-            "time": "2022-02-13T19:59:48+00:00"
+            "time": "2022-02-13T21:16:29+00:00"
         }
     ],
     "packages-dev": [],

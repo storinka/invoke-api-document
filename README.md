@@ -56,7 +56,7 @@ $invoke->setConfig([
             // Name of the instruction
             "name" => "fetch",
             
-            // Protocol of the instruction
+            // Server protocol
             "protocol" => "http",
             
             // Server host
