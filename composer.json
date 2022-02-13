@@ -1,0 +1,22 @@
+{
+    "name": "storinka/invoke-api-document",
+    "description": "Invoke API Document Extension",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Davyd Kohut",
+            "email": "davyd.kohut@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^8.1",
+        "storinka/invoke": "^v2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Invoke\\Toolkit\\Docs\\": "src"
+        }
+    }
+}
