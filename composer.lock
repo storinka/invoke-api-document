@@ -121,12 +121,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/storinka/invoke.git",
-                "reference": "ae2dae3cda9088785d45f306f47463d80a8841da"
+                "reference": "4874c2de57cd87fdf601a6e6f714416ad6f4894b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/storinka/invoke/zipball/ae2dae3cda9088785d45f306f47463d80a8841da",
-                "reference": "ae2dae3cda9088785d45f306f47463d80a8841da",
+                "url": "https://api.github.com/repos/storinka/invoke/zipball/4874c2de57cd87fdf601a6e6f714416ad6f4894b",
+                "reference": "4874c2de57cd87fdf601a6e6f714416ad6f4894b",
                 "shasum": ""
             },
             "require": {
@@ -164,7 +164,7 @@
                 "issues": "https://github.com/storinka/invoke/issues",
                 "source": "https://github.com/storinka/invoke/tree/v2"
             },
-            "time": "2022-03-06T01:21:33+00:00"
+            "time": "2022-03-06T01:49:33+00:00"
         },
         {
             "name": "storinka/invoke-toolkit-validators",
