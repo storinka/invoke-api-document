@@ -2,6 +2,8 @@
 
 namespace Invoke\Toolkit\Docs\Documents;
 
+use Invoke\Attributes\Parameter;
+
 /**
  * Markdown document.
  */
@@ -12,6 +14,7 @@ class MarkdownDocument extends Document
      *
      * @var string $name
      */
+    #[Parameter]
     public string $name;
 
     /**
@@ -19,5 +22,6 @@ class MarkdownDocument extends Document
      *
      * @var string $content
      */
+    #[Parameter]
     public string $content;
 }

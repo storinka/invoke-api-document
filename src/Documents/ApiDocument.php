@@ -3,9 +3,9 @@
 namespace Invoke\Toolkit\Docs\Documents;
 
 use Ds\Set;
+use Invoke\Attributes\Parameter;
 use Invoke\Container;
 use Invoke\Invoke;
-use Invoke\Meta\Parameter;
 use Invoke\Toolkit\Docs\Sections\MethodsSection;
 use Invoke\Toolkit\Validators\ArrayOf;
 use Invoke\Utils\Utils;
@@ -61,6 +61,7 @@ class ApiDocument extends Document
      *
      * @var array $sections
      */
+    #[Parameter]
     #[ArrayOf(SectionDocument::class)]
     public array $sections;
 
@@ -69,6 +70,7 @@ class ApiDocument extends Document
      *
      * @var InvokeInstructionDocument $invokeInstruction
      */
+    #[Parameter]
     public InvokeInstructionDocument $invokeInstruction;
 
     /**
@@ -76,6 +78,7 @@ class ApiDocument extends Document
      *
      * @var array $availableTypes
      */
+    #[Parameter]
     #[ArrayOf(TypeDocument::class)]
     public array $availableTypes;
 
@@ -84,6 +87,7 @@ class ApiDocument extends Document
      *
      * @var array $availableMethods
      */
+    #[Parameter]
     #[ArrayOf(MethodDocument::class)]
     public array $availableMethods;
 
@@ -150,7 +154,7 @@ class ApiDocument extends Document
             "availableTypes" => $typesDocuments,
             "availableMethods" => $methodsDocuments,
 
-            "invokeVersion" => Invoke::$version,
+            "invokeVersion" => Invoke::VERSION,
 
             "invokeInstruction" => InvokeInstructionDocument::from($invokeInstruction),
         ]);

@@ -3,6 +3,7 @@
 namespace Invoke\Toolkit\Docs\Documents;
 
 use BackedEnum;
+use Invoke\Attributes\Parameter;
 use Invoke\Pipe;
 use Invoke\Toolkit\Validators\ArrayOf;
 use Invoke\Type;
@@ -22,6 +23,7 @@ class TypeDocument extends Document
      *
      * @var string $name
      */
+    #[Parameter]
     public string $name;
 
     /**
@@ -29,6 +31,7 @@ class TypeDocument extends Document
      *
      * @var string $uniqueTypeName
      */
+    #[Parameter]
     public string $uniqueTypeName;
 
     /**
@@ -36,6 +39,7 @@ class TypeDocument extends Document
      *
      * @var string|null $summary
      */
+    #[Parameter]
     public ?string $summary;
 
     /**
@@ -43,6 +47,7 @@ class TypeDocument extends Document
      *
      * @var string|null $description
      */
+    #[Parameter]
     public ?string $description;
 
     /**
@@ -52,6 +57,7 @@ class TypeDocument extends Document
      *
      * @var bool $isSimple
      */
+    #[Parameter]
     public bool $isSimple;
 
     /**
@@ -59,6 +65,7 @@ class TypeDocument extends Document
      *
      * @var bool $isData
      */
+    #[Parameter]
     public bool $isData;
 
     /**
@@ -66,6 +73,7 @@ class TypeDocument extends Document
      *
      * @var bool $isUnion
      */
+    #[Parameter]
     public bool $isUnion;
 
     /**
@@ -73,6 +81,7 @@ class TypeDocument extends Document
      *
      * @var bool $isBinary
      */
+    #[Parameter]
     public bool $isBinary;
 
     /**
@@ -80,6 +89,7 @@ class TypeDocument extends Document
      *
      * @var bool $isEnum
      */
+    #[Parameter]
     public bool $isEnum;
 
     /**
@@ -87,6 +97,7 @@ class TypeDocument extends Document
      *
      * @var bool $isArray
      */
+    #[Parameter]
     public bool $isArray;
 
     /**
@@ -94,6 +105,7 @@ class TypeDocument extends Document
      *
      * @var string|null $arrayType
      */
+    #[Parameter]
     public ?string $arrayType;
 
     /**
@@ -101,6 +113,7 @@ class TypeDocument extends Document
      *
      * @var array $unionTypes
      */
+    #[Parameter]
     #[ArrayOf("string")]
     public array $unionTypes;
 
@@ -109,6 +122,7 @@ class TypeDocument extends Document
      *
      * @var array $enumValues
      */
+    #[Parameter]
     #[ArrayOf(["string", "int"])]
     public array $enumValues;
 
@@ -117,6 +131,7 @@ class TypeDocument extends Document
      *
      * @var array $params
      */
+    #[Parameter]
     #[ArrayOf(ParamDocument::class)]
     public array $params;
 
@@ -125,6 +140,7 @@ class TypeDocument extends Document
      *
      * @var array $validators
      */
+    #[Parameter]
     #[ArrayOf(ValidatorDocument::class)]
     public array $validators;
 

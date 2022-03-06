@@ -2,6 +2,7 @@
 
 namespace Invoke\Toolkit\Docs\Documents;
 
+use Invoke\Attributes\Parameter;
 use Invoke\Data;
 
 /**
@@ -14,5 +15,6 @@ class HeaderDocument extends Data
      *
      * @var string $name
      */
+    #[Parameter]
     public string $name;
 }

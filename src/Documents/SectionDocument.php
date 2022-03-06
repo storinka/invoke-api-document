@@ -2,7 +2,7 @@
 
 namespace Invoke\Toolkit\Docs\Documents;
 
-use Invoke\Meta\Parameter;
+use Invoke\Attributes\Parameter;
 use Invoke\Toolkit\Validators\ArrayOf;
 
 /**
@@ -23,6 +23,7 @@ class SectionDocument extends Document
      *
      * @var array $items
      */
+    #[Parameter]
     #[ArrayOf([
         MethodDocument::class,
         TypeDocument::class,

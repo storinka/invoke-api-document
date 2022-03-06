@@ -2,6 +2,7 @@
 
 namespace Invoke\Toolkit\Docs\Documents;
 
+use Invoke\Attributes\Parameter;
 use Invoke\Toolkit\Validators\ArrayOf;
 use Invoke\Utils\Utils;
 
@@ -15,6 +16,7 @@ class ParamDocument extends Document
      *
      * @var string $name
      */
+    #[Parameter]
     public string $name;
 
     /**
@@ -22,6 +24,7 @@ class ParamDocument extends Document
      *
      * @var string|null $summary
      */
+    #[Parameter]
     public ?string $summary;
 
     /**
@@ -29,6 +32,7 @@ class ParamDocument extends Document
      *
      * @var string|null $description
      */
+    #[Parameter]
     public ?string $description;
 
     /**
@@ -36,6 +40,7 @@ class ParamDocument extends Document
      *
      * @var bool $isOptional
      */
+    #[Parameter]
     public bool $isOptional;
 
     /**
@@ -43,6 +48,7 @@ class ParamDocument extends Document
      *
      * @var mixed $defaultValue
      */
+    #[Parameter]
     public mixed $defaultValue;
 
     /**
@@ -50,6 +56,7 @@ class ParamDocument extends Document
      *
      * @var string $type
      */
+    #[Parameter]
     public string $type;
 
     /**
@@ -57,10 +64,11 @@ class ParamDocument extends Document
      *
      * @var array $validators
      */
+    #[Parameter]
     #[ArrayOf(ValidatorDocument::class)]
     public array $validators;
 
-    public function render(array $data): array
+    public function override(array $data): array
     {
         $typeName = Utils::getUniqueTypeName($data["type"]);
         $validatorsDocuments = ValidatorDocument::many($data["validators"]);

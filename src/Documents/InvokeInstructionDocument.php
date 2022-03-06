@@ -2,6 +2,8 @@
 
 namespace Invoke\Toolkit\Docs\Documents;
 
+use Invoke\Attributes\Parameter;
+
 /**
  * Invoke instruction document.
  */
@@ -12,6 +14,7 @@ class InvokeInstructionDocument extends Document
      *
      * @var string
      */
+    #[Parameter]
     public string $name; // default
 
     /**
@@ -19,6 +22,7 @@ class InvokeInstructionDocument extends Document
      *
      * @var string $protocol
      */
+    #[Parameter]
     public string $protocol; // http/https
 
     /**
@@ -26,6 +30,7 @@ class InvokeInstructionDocument extends Document
      *
      * @var string $host
      */
+    #[Parameter]
     public string $host; // localhost
 
     /**
@@ -33,6 +38,7 @@ class InvokeInstructionDocument extends Document
      *
      * @var int $port
      */
+    #[Parameter]
     public int $port; // port
 
     /**
@@ -40,6 +46,7 @@ class InvokeInstructionDocument extends Document
      *
      * @var string|null $path
      */
+    #[Parameter]
     public ?string $path; // invoke
 
     /**
@@ -47,5 +54,6 @@ class InvokeInstructionDocument extends Document
      *
      * @var string $type
      */
+    #[Parameter]
     public string $type; // json
 }

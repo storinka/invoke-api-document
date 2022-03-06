@@ -2,6 +2,8 @@
 
 namespace Invoke\Toolkit\Docs\Documents;
 
+use Invoke\Attributes\Parameter;
+
 /**
  * IFrame document.
  */
@@ -12,6 +14,7 @@ class IframeDocument extends Document
      *
      * @var string $name
      */
+    #[Parameter]
     public string $name;
 
     /**
@@ -19,5 +22,6 @@ class IframeDocument extends Document
      *
      * @var string $url
      */
+    #[Parameter]
     public string $url;
 }

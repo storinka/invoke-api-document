@@ -2,6 +2,7 @@
 
 namespace Invoke\Toolkit\Docs\Documents;
 
+use Invoke\Attributes\Parameter;
 use Invoke\Utils\ReflectionUtils;
 use Invoke\Validator;
 use function Invoke\Utils\get_class_name;
@@ -11,15 +12,19 @@ use function Invoke\Utils\get_class_name;
  */
 class ValidatorDocument extends Document
 {
+    #[Parameter]
     public string $name;
 
+    #[Parameter]
     public ?string $summary;
 
+    #[Parameter]
     public ?string $description;
 
+    #[Parameter]
     public array $data;
 
-    public function render(Validator $validator): array
+    public function override(Validator $validator): array
     {
         $data = [];
 

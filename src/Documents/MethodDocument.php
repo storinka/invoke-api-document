@@ -2,6 +2,7 @@
 
 namespace Invoke\Toolkit\Docs\Documents;
 
+use Invoke\Attributes\Parameter;
 use Invoke\Toolkit\Validators\ArrayOf;
 use Invoke\Utils\ReflectionUtils;
 use Invoke\Utils\Utils;
@@ -16,6 +17,7 @@ class MethodDocument extends Document
      *
      * @var string $name
      */
+    #[Parameter]
     public string $name;
 
     /**
@@ -23,6 +25,7 @@ class MethodDocument extends Document
      *
      * @var string|null $summary
      */
+    #[Parameter]
     public ?string $summary;
 
     /**
@@ -30,6 +33,7 @@ class MethodDocument extends Document
      *
      * @var string|null $description
      */
+    #[Parameter]
     public ?string $description;
 
     /**
@@ -37,6 +41,7 @@ class MethodDocument extends Document
      *
      * @var array $params
      */
+    #[Parameter]
     #[ArrayOf(ParamDocument::class)]
     public array $params;
 
@@ -45,6 +50,7 @@ class MethodDocument extends Document
      *
      * @var string $resultType
      */
+    #[Parameter]
     public string $resultType;
 
     /**
@@ -52,6 +58,7 @@ class MethodDocument extends Document
      *
      * @var array $tags
      */
+    #[Parameter]
     #[ArrayOf("string")]
     public array $tags;
 
@@ -60,6 +67,7 @@ class MethodDocument extends Document
      *
      * @var array $headers
      */
+    #[Parameter]
     #[ArrayOf(HeaderDocument::class)]
     public array $headers;
 
