@@ -6,7 +6,7 @@ use Invoke\Data;
 
 class Document extends Data
 {
-    public function shouldIncludeTypeName(): bool
+    public function shouldReturnTypeName(): bool
     {
         return true;
     }
