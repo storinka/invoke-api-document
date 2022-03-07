@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "514d2eb66f0320e6c3b9a66b34d0b8f1",
+    "content-hash": "c7340d9a5b68c9e91503987bb4946c8f",
     "packages": [
         {
             "name": "php-ds/php-ds",
@@ -63,7 +63,7 @@
         },
         {
             "name": "psr/container",
-            "version": "dev-master",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/container.git",
@@ -78,7 +78,6 @@
             "require": {
                 "php": ">=7.4.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -117,16 +116,16 @@
         },
         {
             "name": "storinka/invoke",
-            "version": "v2.x-dev",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/storinka/invoke.git",
-                "reference": "4874c2de57cd87fdf601a6e6f714416ad6f4894b"
+                "reference": "c311bccabba7a4fc37a1d56ae5c93012aa8f6398"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/storinka/invoke/zipball/4874c2de57cd87fdf601a6e6f714416ad6f4894b",
-                "reference": "4874c2de57cd87fdf601a6e6f714416ad6f4894b",
+                "url": "https://api.github.com/repos/storinka/invoke/zipball/c311bccabba7a4fc37a1d56ae5c93012aa8f6398",
+                "reference": "c311bccabba7a4fc37a1d56ae5c93012aa8f6398",
                 "shasum": ""
             },
             "require": {
@@ -137,9 +136,9 @@
                 "psr/container": "^2.0 | ^1.0"
             },
             "require-dev": {
+                "mockery/mockery": "dev-master",
                 "phpunit/phpunit": "^9"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "files": [
@@ -162,22 +161,22 @@
             "description": "Invoke Core library",
             "support": {
                 "issues": "https://github.com/storinka/invoke/issues",
-                "source": "https://github.com/storinka/invoke/tree/v2"
+                "source": "https://github.com/storinka/invoke/tree/2.0.0"
             },
-            "time": "2022-03-06T01:49:33+00:00"
+            "time": "2022-03-07T19:53:54+00:00"
         },
         {
             "name": "storinka/invoke-toolkit-validators",
-            "version": "dev-main",
+            "version": "v2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/storinka/invoke-toolkit-validators.git",
-                "reference": "79c87df9ddfd803e8db3aef1eae0e9f858588a2b"
+                "reference": "cbc26a95c8efd9ebcb84f603befe1caca19b48de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/storinka/invoke-toolkit-validators/zipball/79c87df9ddfd803e8db3aef1eae0e9f858588a2b",
-                "reference": "79c87df9ddfd803e8db3aef1eae0e9f858588a2b",
+                "url": "https://api.github.com/repos/storinka/invoke-toolkit-validators/zipball/cbc26a95c8efd9ebcb84f603befe1caca19b48de",
+                "reference": "cbc26a95c8efd9ebcb84f603befe1caca19b48de",
                 "shasum": ""
             },
             "require": {
@@ -185,7 +184,6 @@
                 "php": "^8.1",
                 "storinka/invoke": "^2.0"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -205,17 +203,15 @@
             "description": "Invoke Toolkit validators collection",
             "support": {
                 "issues": "https://github.com/storinka/invoke-toolkit-validators/issues",
-                "source": "https://github.com/storinka/invoke-toolkit-validators/tree/main"
+                "source": "https://github.com/storinka/invoke-toolkit-validators/tree/v2.0.0"
             },
-            "time": "2022-03-06T01:40:50+00:00"
+            "time": "2022-03-07T20:11:13+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "dev",
-    "stability-flags": {
-        "storinka/invoke-toolkit-validators": 20
-    },
+    "minimum-stability": "stable",
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

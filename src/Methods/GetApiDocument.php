@@ -2,8 +2,8 @@
 
 namespace Invoke\Toolkit\Docs\Methods;
 
+use Invoke\Attributes\NotParameter;
 use Invoke\Invoke;
-use Invoke\Meta\NotParameter;
 use Invoke\Method;
 use Invoke\Toolkit\Docs\Documents\ApiDocument;
 
