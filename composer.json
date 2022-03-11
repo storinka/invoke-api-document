@@ -14,7 +14,7 @@
         "php": "^8.1",
         "storinka/invoke": "^2.0",
         "storinka/invoke-toolkit-validators": "^2.0",
-        "phpdocumentor/reflection-common": "^2.2"
+        "phpdocumentor/reflection-docblock": "^5.3"
     },
     "autoload": {
         "psr-4": {
