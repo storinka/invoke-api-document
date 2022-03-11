@@ -5,6 +5,7 @@ namespace Invoke\Toolkit\Docs\Documents;
 use Invoke\Attributes\Parameter;
 use Invoke\Toolkit\Validators\ArrayOf;
 use Invoke\Utils\ReflectionUtils;
+use Invoke\Toolkit\Docs\Utils\ReflectionUtils as DocsReflectionUtils;
 use Invoke\Utils\Utils;
 
 /**
@@ -82,7 +83,7 @@ class MethodDocument extends Document
     {
         $reflectionClass = ReflectionUtils::getClass($class);
 
-        $comment = ReflectionUtils::extractComment($reflectionClass);
+        $comment = DocsReflectionUtils::extractComment($reflectionClass);
         $summary = $comment["summary"];
         $description = $comment["description"];
 

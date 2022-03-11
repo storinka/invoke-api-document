@@ -12,6 +12,7 @@ use Invoke\Types\WrappedType;
 use Invoke\Utils\ReflectionUtils;
 use Invoke\Utils\Utils;
 use Invoke\Validator;
+use Invoke\Toolkit\Docs\Utils\ReflectionUtils as DocsReflectionUtils;
 
 /**
  * Type document.
@@ -182,7 +183,7 @@ class TypeDocument extends Document
 
         $reflectionClass = ReflectionUtils::getClass(is_string($type) ? $type : $type::class);
 
-        $comment = ReflectionUtils::extractComment($reflectionClass);
+        $comment = DocsReflectionUtils::extractComment($reflectionClass);
         $summary = $comment["summary"];
         $description = $comment["description"];
 

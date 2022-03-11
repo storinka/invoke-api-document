@@ -5,6 +5,7 @@ namespace Invoke\Toolkit\Docs\Documents;
 use Invoke\Attributes\Parameter;
 use Invoke\Utils\ReflectionUtils;
 use Invoke\Validator;
+use Invoke\Toolkit\Docs\Utils\ReflectionUtils as DocsReflectionUtils;
 use function Invoke\Utils\get_class_name;
 
 /**
@@ -33,7 +34,7 @@ class ValidatorDocument extends Document
         }
 
         $reflectionClass = ReflectionUtils::getClass($validator::class);
-        $comment = ReflectionUtils::extractComment($reflectionClass);
+        $comment = DocsReflectionUtils::extractComment($reflectionClass);
         $summary = $comment["summary"];
         $description = $comment["description"];
 
